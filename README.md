@@ -23,6 +23,3 @@ O notebook segue a arquitetura medalhão e está dividido nas seguintes etapas:
 ## Diferenciais da Solução
 * **Foco em Probabilidade:** O modelo não entrega apenas um "sim" ou "não", mas uma probabilidade, permitindo priorizar os clientes de maior risco.
 * **Contorno Técnico:** Resolução de limitações de infraestrutura (whitelisting) através da integração eficiente entre Spark e bibliotecas Python tradicionais.
-
-## Próximos Passos
-Este projeto é a primeira etapa de uma série de análises sobre o ciclo de vida do cliente. Atualmente, estou a desenvolver um dashboard para visualizar estes indicadores, que será integrado ao meu portfólio de projetos em breve.
