@@ -5,21 +5,41 @@ from dash_iconify import DashIconify
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
+import os
 
-# --- CARGA E TRATAMENTO DE DADOS ---
-silver = pd.read_csv("churn_silver_2025.csv")
-gold = pd.read_csv("churn_gold_2025.csv")
-df = pd.merge(silver, gold, on="id_cliente").rename(columns={'categoria_principal_voc': 'principal_dor_cliente'})
-df['data_assinatura'] = pd.to_datetime(df['data_assinatura'])
+# Isso garante que o Python encontre os CSVs na pasta do servidor
+curr_dir = os.path.dirname(__file__)
 
-# Médias Globais para os Deltas
-GLOBAL_RISK = df['probabilidade_churn'].mean()
-GLOBAL_VOC = df['score_sentimento_voc'].mean()
-GLOBAL_VAL = df['valor_mensalidade'].mean()
+try:
+    # Carregando os dados com caminhos absolutos
+    silver_path = os.path.join(curr_dir, "churn_silver_2025.csv")
+    gold_path = os.path.join(curr_dir, "churn_gold_2025.csv")
+    
+    silver = pd.read_csv(silver_path)
+    gold = pd.read_csv(gold_path)
+    
+    # Merge e tratamento de nomes (sua regra de negócio: Dor do Cliente)
+    df = pd.merge(silver, gold, on="id_cliente").rename(
+        columns={'categoria_principal_voc': 'principal_dor_cliente'}
+    )
+    df['data_assinatura'] = pd.to_datetime(df['data_assinatura'])
+
+    # Médias Globais para os cálculos de comparação (Deltas)
+    GLOBAL_RISK = df['probabilidade_churn'].mean()
+    GLOBAL_VOC = df['score_sentimento_voc'].mean()
+    GLOBAL_VAL = df['valor_mensalidade'].mean()
+
+except Exception as e:
+    print(f"Erro ao carregar arquivos: {e}")
+    # Criamos um DF vazio para o app não crashar no build se o arquivo sumir
+    df = pd.DataFrame()
+    GLOBAL_RISK = 0
+    GLOBAL_VOC = 0
+    GLOBAL_VAL = 0
 
 # --- INICIALIZAÇÃO DO APP ---
 app = dash.Dash(__name__)
-server = app.server
+server = app.server # O Render usa isso aqui!
 
 # --- COMPONENTES DE UI ---
 
