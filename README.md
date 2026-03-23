@@ -1,4 +1,4 @@
-# Customer Churn Prediction 2025: ML Pipeline + Interactive Dashboard
+# Customer Churn Prediction: ML Pipeline + Interactive Dashboard
 
 ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
