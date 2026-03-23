@@ -14,7 +14,7 @@ Este repositório apresenta uma solução completa de **Customer Churn Analytics
 O resultado é uma visão de ponta a ponta: da camada analítica e preditiva até a camada visual de decisão, pronta para uso em contextos de CRM, Customer Success e gestão executiva.
 
 ## Dashboard Interativo
-Clique na imagem abaixo [(ou aqui)](https://churn-7uiy.onrender.com/dashboard/) para abrir a versão interativa do dashboard, criado para transformar a saída do modelo em uma ferramenta acionável de retenção:
+Clique na imagem abaixo para abrir a versão [interativa do dashboard](https://churn-7uiy.onrender.com/dashboard/), criado para transformar a saída do modelo em uma ferramenta acionável de retenção:
 
 [![Dashboard de Churn](./churn.png)](https://churn-7uiy.onrender.com/dashboard/)
 *Preview do dashboard interativo com foco em risco, ticket, sentimento e principal dor do cliente.*
