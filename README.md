@@ -97,35 +97,6 @@ O fluxo do projeto pode ser resumido da seguinte forma:
 
 ---
 
-## Como Executar
-
-### Notebook no Databricks
-1. Faça upload do arquivo [`churn_prediction_databricks.ipynb`](./churn_prediction_databricks.ipynb) no Databricks.
-2. Ajuste o caminho da camada Silver, se necessário.
-3. Execute as células para gerar a saída preditiva da camada Gold.
-
-### Dashboard Localmente
-1. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Inicie a aplicação:
-   ```bash
-   python app.py
-   ```
-3. Acesse no navegador a URL local exibida no terminal.
-4. Login padrão:
-   * **Usuário**: `adm`
-   * **Senha**: `adm123`
-
-### Deploy no Render
-Use as seguintes configurações:
-
-* **Build Command**: `pip install -r requirements.txt`
-* **Start Command**: `gunicorn app:server`
-
----
-
 ## Valor de Negócio
 
 Mais do que prever churn, este projeto foi pensado para responder a uma pergunta prática:
