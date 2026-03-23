@@ -6,14 +6,14 @@
 ![Dash](https://img.shields.io/badge/App-Dash%20%2B%20Plotly-6f42c1)
 ![Render](https://img.shields.io/badge/Deploy-Render-46E3B7)
 
-Este repositório apresenta uma solução completa de **Customer Churn Analytics**, construída como continuidade do projeto de **Voice of Customer (VoC)** do portfólio. A proposta aqui é transformar a Voz do Cliente em ação prática de retenção, unindo duas entregas complementares no mesmo fluxo:
+Este repositório apresenta uma solução completa de **Customer Churn Analytics**, construída como continuidade do projeto de **[Voice of Customer (VoC)](https://github.com/schenkel94/VoC)** do portfólio. A proposta aqui é transformar a Voz do Cliente em ação prática de retenção, unindo duas entregas complementares no mesmo fluxo:
 
 * **Notebook de Machine Learning no Databricks** para calcular a probabilidade de churn por cliente.
 * **Dashboard web interativo** para priorização de retenção com foco na principal dor reportada pelo cliente.
 
 O resultado é uma visão de ponta a ponta: da camada analítica e preditiva até a camada visual de decisão, pronta para uso em contextos de CRM, Customer Success e gestão executiva.
 
-## Dashboard Interativo
+## [Dashboard Interativo](https://churn-7uiy.onrender.com/dashboard/
 Clique na imagem abaixo para abrir a versão interativa do dashboard, criado para transformar a saída do modelo em uma ferramenta acionável de retenção:
 
 [![Dashboard de Churn](./churn.png)](https://churn-7uiy.onrender.com/dashboard/)
